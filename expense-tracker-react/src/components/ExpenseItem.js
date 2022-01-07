@@ -7,7 +7,7 @@ function ExpenseItem(props) {
   // .toLocaleString gives you options of how to display the date
 
   return (
-    // use props.date.toISOString to get the date to show as a string. Otherwise it'll break. Not pretty though
+    
     <div className='expense-item'>
       <ExpenseDate date={props.date}/>
       <div className='expense-item__description'>
