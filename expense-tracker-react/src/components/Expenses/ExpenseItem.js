@@ -1,7 +1,7 @@
 // For rendering expense item data
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
-import Card from './Card';
+import Card from '../UI/Card';
 
 function ExpenseItem(props) {
   // Card is a custom component - with props.children, everything inside the <Card> tags
