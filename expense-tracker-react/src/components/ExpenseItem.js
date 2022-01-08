@@ -1,20 +1,20 @@
 // For rendering expense item data
 import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
+import Card from './Card';
 
 function ExpenseItem(props) {
-  // months start at 0, so March is month 2
-  // .toLocaleString gives you options of how to display the date
+  // Card is a custom component - with props.children, everything inside the <Card> tags
+  // is available to the Card component in Card.js
 
   return (
-    
-    <div className='expense-item'>
-      <ExpenseDate date={props.date}/>
+    <Card className='expense-item'>
+      <ExpenseDate date={props.date} />
       <div className='expense-item__description'>
         <h2>{props.title}</h2>
         <div className='expense-item__price'>${props.amount}</div>
       </div>
-    </div>
+    </Card>
   );
 }
 
