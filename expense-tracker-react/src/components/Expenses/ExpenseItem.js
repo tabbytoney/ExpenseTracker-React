@@ -7,6 +7,9 @@ const ExpenseItem = (props) => {
   // Card is a custom component - with props.children, everything inside the <Card> tags
   // is available to the Card component in Card.js
 
+  const clickHandler = () => {
+    console.log('Clicked it!');
+  };
   return (
     <Card className='expense-item'>
       <ExpenseDate date={props.date} />
@@ -14,8 +17,9 @@ const ExpenseItem = (props) => {
         <h2>{props.title}</h2>
         <div className='expense-item__price'>${props.amount}</div>
       </div>
+      <button onClick={clickHandler}>Change Title</button>
     </Card>
   );
-}
+};
 
 export default ExpenseItem;
