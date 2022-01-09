@@ -2,7 +2,7 @@ import './Card.css';
 
 // want to use this as a wrapper component
 
-function Card(props) {
+const Card = (props) => {
   // Card is used custom component in ExpenseItem.js - with props.children,
   // everything inside the <Card> tags is available to the Card component
 

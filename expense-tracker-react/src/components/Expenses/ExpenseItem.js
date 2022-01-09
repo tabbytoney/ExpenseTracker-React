@@ -3,7 +3,7 @@ import './ExpenseItem.css';
 import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 
-function ExpenseItem(props) {
+const ExpenseItem = (props) => {
   // Card is a custom component - with props.children, everything inside the <Card> tags
   // is available to the Card component in Card.js
 

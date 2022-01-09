@@ -1,6 +1,6 @@
 import './ExpenseDate.css';
 
-function ExpenseDate(props) {
+const ExpenseDate = (props) => {
   // use props.date.toISOString to get the date to show as a string. Otherwise it'll break. Not pretty though
   // months start at 0, so March is month 2
   // .toLocaleString gives you options of how to display the date
