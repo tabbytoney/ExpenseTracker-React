@@ -9,7 +9,7 @@ const ExpenseItem = (props) => {
   // is available to the Card component in Card.js
 
   // React hooks like useState should only be called directly inside a component function, not outside or in nested functions
-  // props gets the current value of the title
+  // props gets the current value of the title.
    const [title, setTitle] = useState(props.title);
 
   const clickHandler = () => {
