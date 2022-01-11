@@ -2,6 +2,7 @@ import ExpenseItem from './ExpenseItem';
 import Card from '../UI/Card';
 import './Expenses.css';
 
+// numbers after items mark which item in the array it's providing info for - from App.js
 const Expenses = (props) => {
   return (
     <Card className='expenses'>
