@@ -9,7 +9,7 @@ const Expenses = (props) => {
   const [filteredYear, setFilteredYear] = useState('2020'); // eslint-disable-line react-hooks/rules-of-hooks
 
   const filterChangeHandler = (selectedYear) => {
-    setFilteredYear(selectedYear);
+    setFilteredYear(selectedYear); // part of state pattern
   };
   return (
     <div>
