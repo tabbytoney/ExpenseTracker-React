@@ -11,11 +11,19 @@ const Expenses = (props) => {
   const filterChangeHandler = (selectedYear) => {
     setFilteredYear(selectedYear); // part of state pattern
   };
+
+  // filter returns a new array
+  const filteredExpenses = props.items.filter(expense => {
+    // returns true if the selected matches the filtered year
+    // only items that return true (will be a new array) are stored in filteredExpenses
+    return expense.date.getFullYear().toString() === filteredYear
+  });
+
   return (
     <div>
       <Card className='expenses'>
         <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
-        {props.items.map((expense ) => (
+        {filteredExpenses.map((expense) => (
           <ExpenseItem key={expense.id} title={expense.title} amount={expense.amount} date={expense.date} />
         ))}
         {/* <ExpenseItem title={props.items[0].title} amount={props.items[0].amount} date={props.items[0].date} />
