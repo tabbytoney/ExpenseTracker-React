@@ -9,16 +9,18 @@ const ExpenseItem = (props) => {
 
   // React hooks like useState should only be called directly inside a component function, not outside or in nested functions
   // props gets the current value of the title.
-   // const [title, setTitle] = useState(props.title);
-  
-  return ( 
-    <Card className='expense-item'>
-      <ExpenseDate date={props.date} />
-      <div className='expense-item__description'>
-        <h2>{props.title}</h2>
-        <div className='expense-item__price'>${props.amount}</div>
-      </div>
-    </Card>
+  // const [title, setTitle] = useState(props.title);
+
+  return (
+    <li>
+      <Card className='expense-item'>
+        <ExpenseDate date={props.date} />
+        <div className='expense-item__description'>
+          <h2>{props.title}</h2>
+          <div className='expense-item__price'>${props.amount}</div>
+        </div>
+      </Card>
+    </li>
   );
 };
 
