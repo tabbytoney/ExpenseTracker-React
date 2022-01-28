@@ -3,6 +3,7 @@ import Card from '../UI/Card';
 import './Expenses.css';
 import ExpensesFilter from './ExpensesFilter';
 import ExpensesList from './ExpensesList';
+import ExpensesChart from './ExpensesChart';
 
 // numbers after items mark which item in the array it's providing info for - from App.js
 const Expenses = (props) => {
@@ -19,12 +20,11 @@ const Expenses = (props) => {
     return expense.date.getFullYear().toString() === filteredYear;
   });
 
-  
-
   return (
     <div>
       <Card className='expenses'>
         <ExpensesFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
+        <ExpensesChart expenses={filteredExpenses} />
         <ExpensesList items={filteredExpenses} />
         {/* {filteredExpenses.length === 0 && <p>No expenses found!</p>} */}
         {/* {filteredExpenses.length > 0 && filteredExpenses.map((expense) => (
