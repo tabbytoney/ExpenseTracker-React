@@ -49,6 +49,7 @@ const ExpenseForm = (props) => {
     //   ...userInput,
     //   enteredDate: event.target.value
     // });
+    // 
   };
 
   // prevent default stops the page from reloading when you add a new expense item
